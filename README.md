@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
     try {
       await this.zendeskService.initZendesk({
         version: 2, // Use version 1 for legacy widget, 2 for messenger
-        accountUrl: "https://your-account.zendesk.com",
+        accountUrl: "your-account.zendesk.com",
         timeOut: 30000,
         injectionTag: "head",
         callback: (zE: any) => {
@@ -139,7 +139,7 @@ export class ChatComponent implements OnInit {
     await this.zendeskService
       .initZendesk({
         version: 2,
-        accountUrl: "https://your-account.zendesk.com",
+        accountUrl: "your-account.zendesk.com",
         callback: (zE: any) => {
           console.log("Zendesk Widget initialized", zE);
           console.log("Zendesk Version:", this.zendeskService.version);
